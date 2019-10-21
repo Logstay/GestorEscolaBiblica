@@ -1,7 +1,7 @@
 # Projeto Gestor Escola Biblica
 
-Projeto Pessoal de gestão de EBD usando um crud completo (Criação,Leitura,Edição,Remoção).
-Cadastro de Alunos, Usuario, Chamada de alunos
+Projeto Pessoal de gestão de EBD usando um crud completo em DjangoFrameWork (Criação,Leitura,Edição,Remoção).
+Cadastro de Alunos, Usuario, Chamada de alunos.
 
 ## Versão
 para mais informações das versões observar requemirets.txt.

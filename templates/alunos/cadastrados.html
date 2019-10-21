@@ -1,0 +1,43 @@
+ {% extends 'alunos/base.html' %}
+
+{% block titulo %}
+    Home
+{% endblock titulo %}
+
+{% block conteudo %}
+
+<div class="col-md-8 offset-md-2">
+        <table class="table col-md"  cellspacing="0" >
+        <thead>
+        <tr>
+
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Telefone</th>
+            <th>Sexo</th>
+            <th>Sala</th>
+            <th>Edição/Remoção</th>
+
+        </tr>
+
+        </thead>
+        <tbody >
+        {% for i in alunos %}
+            <tr>
+                <td><a href="{% url 'listar_alunos_id' i.id %}">{{ i.nome }} </a></td>
+                <td> {{ i.niver_data | date:'d M Y' }} </td>
+                <td> {{ i.telefone | phone2numeric }}</td>
+                <td> {{ i.sexo }} </td>
+                <td> {{ i.sala }} </td>
+                <td>
+                <a href="{% url 'editar_aluno' i.id %}">Editar</a>
+                <a href="{% url 'remover_aluno' i.id %}">Remover</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+       </div>
+ {% endblock conteudo %}

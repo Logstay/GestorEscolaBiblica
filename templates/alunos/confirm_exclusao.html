@@ -1,0 +1,27 @@
+{% extends 'alunos/base.html' %}
+
+{% block titulo %}
+    confirmar exclusão
+{% endblock titulo %}
+
+{% block conteudo %}
+<div class="card" style="margin:50px;">
+        <div class="card-header">
+            Dados do Aluno - Tem certeza da remoção ?
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Nome: {{ aluno.nome }}</h5>
+            <h5 class="card-title">Aniversario: {{ aluno.niver_data }}</h5>
+            <h5 class="card-title">Sexo: {{ aluno.sexo }}</h5>
+            <h5 class="card-title">Sala: {{ aluno.sala }}</h5>
+            <h5 class="card-title">Telefone: {{ aluno.telefone }}</h5>
+            <form method="post">
+                {% csrf_token %}
+                <button class="btn btn-danger" type="submit">Remover</button>
+                <a href="{{ request.META.HTTP_REFERER }}" CLASS="btn btn-outline-success">Voltar</a>
+            </form>
+
+
+        </div>
+    </div>
+{% endblock conteudo %}

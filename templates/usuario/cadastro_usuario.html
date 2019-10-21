@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+{% load meus_filtros %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Escola Biblica - Cadastro-Usuario</title>
+    <link rel="stylesheet" href="{% static 'alunos/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'alunos/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="{% static 'alunos/fonts/fontawesome-all.min.css'  %}">
+    <link rel="stylesheet" href="{% static 'alunos/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'alunos/fonts/fontawesome5-overrides.min.css' %} ">
+     <link rel="stylesheet" href="{% static 'alunos/css/Pretty-Registration-Form.css' %}">
+    <link rel="stylesheet" href="{% static 'alunos/css/-Login-form-Page-BS4-.css' %} ">
+    <link rel="stylesheet" href="{% static 'alunos/css/Form-Select---Full-Date---Month-Day-Year.css' %} ">
+</head>
+<body id="page-top">
+<header class="masthead bg-primary text-white text-center " style="background-color:#8ff8eb!important;">
+    <h1>Escola Biblica Gestor</h1>
+    <section class="bg-primary text-white mb-0" style="background-color:#8ff8eb!important;">
+
+<div class="row register-form">
+        <div class="col-md-8 offset-md-2">
+            <form class="custom-form" method="post">
+                {% csrf_token %}
+                <h1>Cadastro de Usuario</h1>
+                <div class="form-row form-group">
+                    {{ form_usuario.username.errors }}
+                    <div class="col-sm-4 d-xl-flex my-auto justify-content-xl-center label-column">
+                        <div class="btn-group" role="group"></div>
+                        <label>Usuario: </label></div>
+                    <input class="form-control">
+                    {{ form_usuario.username  }}
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <div class="form-row form-group">
+                    {{ form_usuario.password1.errors}}
+                    <div class="col-sm-4 d-xl-flex justify-content-xl-center label-column"><label
+                            class="col-form-label justify-content-xl-center">Senha: </label> </div>
+                     <input class="form-control">
+                    {{ form_usuario.password1 }}
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <div class="form-row form-group">
+                    {{ form_usuario.password2.errors }}
+                    <div class="col-sm-4 d-xl-flex justify-content-xl-center label-column"><label
+                            class="col-form-label">Repetir-Senha: </label></div>
+                     <input class="form-control" type="text">
+                    {{ form_usuario.password2  }}
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <div class="form-row form-group">
+                    {{ form_usuario.email.errors }}
+                    <div class="col-sm-4 label-column">
+                        <label class="col-form-label d-xl-flex justify-content-xl-center">Email:</label></div>
+                         <input class="form-control" type="text">
+                    {{ form_usuario.email }}
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <input class="btn btn-info submit-button" type="submit"  name="Cadastrar">
+            </form>
+        </div>
+    </div>
+</section>
+</header>
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">informações</h4>
+                <p>Kaique Moreira de lima - 25 anos</p>
+            </div>
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase">redes sociais</h4>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button" href="https://www.facebook.com/kaiquepng"
+                                                    target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button" href="https://github.com/Logstay" target="_blank"><i
+                            class="fa fa-github-square fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button" href="https://twitter.com/EllKaik" target="_blank"><i
+                            class="fa fa-twitter fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button"
+                                                    href="https://www.linkedin.com/in/kaique-moreira-aa688914b/"
+                                                    target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text-uppercase mb-4">Informações</h4>
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="pt_BR" data-type="vertical" data-theme="dark" data-vanity="kaique-moreira-logstay"><a class="LI-simple-link" href='https://br.linkedin.com/in/kaique-moreira-logstay?trk=profile-badge'>Kaique Moreira</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright ©&nbsp;KaiqueMoreira 2019</small></div>
+</div>
+<div class="d-lg-none scroll-to-top position-fixed rounded"><a
+        class="d-block js-scroll-trigger text-center text-white rounded" href="#page-top"><i
+        class="fa fa-chevron-up"></i></a></div>
+<script src="{% static 'alunos/js/jquery.min.js' %} "></script>
+<script src="{% static 'alunos/js/bootstrap.min.js' %} "></script>
+<script src="{% static 'alunos/js/smart-forms.min.js' %} "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="{% static 'alunos/js/freelancer.js' %} "></script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>
+
+
+

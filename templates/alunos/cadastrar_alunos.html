@@ -1,0 +1,58 @@
+{% extends 'alunos/base.html' %}
+{% load meus_filtros %}
+
+{% block titulo %}
+    Home
+{% endblock titulo %}
+
+{% block conteudo %}
+<div class="row register-form">
+        <div class="col-md-8 offset-md-2">
+            <form class="custom-form" method="post">
+                {% csrf_token %}
+                <h1>Cadastro de Alunos</h1>
+                <div class="form-row form-group">
+                    {{ form.nome.errors }}
+                    <div class="col-sm-4 d-xl-flex my-auto justify-content-xl-center label-column">
+                        <div class="btn-group" role="group"></div>
+                        <label>Name </label></div>
+                    {{ form.nome | addclass:'form-control' }}
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <div class="form-row form-group">
+                    {{ form.sexo.errors }}
+                    <div class="col-sm-4 d-xl-flex justify-content-xl-center label-column"><label
+                            class="col-form-label">Sexo</label></div>
+                    {{ form.sexo | addclass:'form-control'}}
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <div class="form-row form-group">
+                    {{ form.sala.errors }}
+                    <div class="col-sm-4 d-xl-flex justify-content-xl-center label-column"><label
+                            class="col-form-label">Sala</label></div>
+                    {{ form.sala | addclass:'form-control' }}
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <div class="form-row form-group">
+                    {{ form.niver_data.errors }}
+                    <div class="col-sm-4 label-column">
+                        <label class="col-form-label d-xl-flex justify-content-xl-center">Data-aniversário</label></div>
+                    {{ form.niver_data | addclass:'form-control' }}
+
+                    <div class="col-sm-6 input-column"></div>
+                </div>
+                <div class="form-row form-group">
+                    {{ form.telefone.errors }}
+                    <div class="col-sm-4 d-xl-flex justify-content-xl-center label-column">
+                        <label class="col-form-label">Telefone</label></div>
+                    {{ form.telefone | addclass:'form-control' }}
+                    <div class="col-sm-6 input-column"></div>
+
+                </div>
+                <input class="btn btn-info submit-button" type="submit" name="Cadastrar">
+
+            </form>
+        </div>
+    </div>
+{% endblock conteudo %}
+

@@ -1,0 +1,17 @@
+header.masthead{
+ padding-top: calc(6rem + 106px);
+}
+
+.table{
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  font: bold 14px sans-serif;
+}
+
+@media (max-width:400px) {
+  .table {
+    padding: 55px 10px;
+  }
+}
+

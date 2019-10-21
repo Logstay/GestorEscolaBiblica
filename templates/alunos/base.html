@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static  %}
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>
+        {% block titulo %}
+
+        {% endblock titulo %}
+    </title>
+    <link rel="stylesheet" href="{% static 'alunos/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'alunos/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="{% static 'alunos/fonts/fontawesome-all.min.css'  %}">
+    <link rel="stylesheet" href="{% static 'alunos/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'alunos/fonts/fontawesome5-overrides.min.css' %} ">
+     <link rel="stylesheet" href="{% static 'alunos/css/Pretty-Registration-Form.css' %}">
+    <link rel="stylesheet" href="{% static 'alunos/css/-Login-form-Page-BS4-.css' %} ">
+    <link rel="stylesheet" href="{% static 'alunos/css/Form-Select---Full-Date---Month-Day-Year.css' %} ">
+
+</head>
+
+<body id="page-top">
+<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
+    <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Escola Biblica Gestor</a>
+        <button data-toggle="collapse" data-target="#navbarResponsive"
+                class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded"
+                aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation" style="background-color:#8ff8eb!important;"><i
+                class="fa fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1" role="presentation"><a
+                        class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'home' %}">inicio</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1" role="presentation"><a
+                        class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'listar_alunos' %}">cadastrados</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1" role="presentation"></li>
+                <li class="nav-item mx-0 mx-lg-1" role="presentation"><a
+                        class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                        href="{% url 'cadastrar_alunos' %}">cadastrar</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1" role="presentation"><a
+                        class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                        href="{% url 'logout' %}">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="masthead bg-primary text-white text-center " style="background-color:#8ff8eb!important;">
+
+    <h1>Escola Biblica Gestor</h1>
+    <section class="bg-primary text-white mb-0" style="background-color:#8ff8eb!important;">
+
+        {% block conteudo %}
+
+
+        {% endblock conteudo %}
+
+    </section>
+</header>
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">informações</h4>
+                <p>Kaique Moreira de lima - 25 anos</p>
+            </div>
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase">redes sociais</h4>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button" href="https://www.facebook.com/kaiquepng"
+                                                    target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button" href="https://github.com/Logstay" target="_blank"><i
+                            class="fa fa-github-square fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button" href="https://twitter.com/EllKaik" target="_blank"><i
+                            class="fa fa-twitter fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                                    role="button"
+                                                    href="https://www.linkedin.com/in/kaique-moreira-aa688914b/"
+                                                    target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text-uppercase mb-4">Informações</h4>
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="pt_BR" data-type="vertical" data-theme="dark" data-vanity="kaique-moreira-logstay"><a class="LI-simple-link" href='https://br.linkedin.com/in/kaique-moreira-logstay?trk=profile-badge'>Kaique Moreira</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright ©&nbsp;KaiqueMoreira 2019</small></div>
+</div>
+<div class="d-lg-none scroll-to-top position-fixed rounded"><a
+        class="d-block js-scroll-trigger text-center text-white rounded" href="#page-top"><i
+        class="fa fa-chevron-up"></i></a></div>
+<script src="{% static 'alunos/js/jquery.min.js' %} "></script>
+<script src="{% static 'alunos/js/bootstrap.min.js' %} "></script>
+<script src="{% static 'alunos/js/smart-forms.min.js' %} "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="{% static 'alunos/js/freelancer.js' %} "></script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+
+</html>
+
